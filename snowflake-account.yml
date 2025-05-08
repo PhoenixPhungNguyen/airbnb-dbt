@@ -1,0 +1,8 @@
+Account: udtoltd-pr93316
+
+Username: dbt
+Password: dbtPassword123
+Role: transform
+Warehouse: COMPUTE_WH
+Database: AIRBNB
+Schema: DEV
