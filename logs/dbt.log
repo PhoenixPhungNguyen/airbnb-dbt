@@ -1,0 +1,32 @@
+[0m17:42:10.044818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcca0e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cca0a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cca0a30>]}
+
+
+============================== 17:42:10.236973 | 1fd7e585-063b-4495-bcae-335779dbe0ae ==============================
+[0m17:42:10.236973 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:42:10.239287 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phungnguyen/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init airbnb_dbt', 'send_anonymous_usage_stats': 'True'}
+[0m17:42:10.329343 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/Users/phungnguyen/.dbt')}
+[0m17:42:10.329950 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m17:42:10.334957 [debug] [MainThread]: Starter project path: /Users/phungnguyen/Documents/Data_Engineer_DA/Dbt_warehouse/airbnb/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m17:42:10.348198 [info ] [MainThread]: 
+Your new dbt project "airbnb_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:42:10.349764 [info ] [MainThread]: Setting up your profile.
+[0m18:05:29.855049 [info ] [MainThread]: Profile airbnb_dbt written to /Users/phungnguyen/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:05:29.870255 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 1399.92, "process_in_blocks": "0", "process_kernel_time": 0.897998, "process_mem_max_rss": "117772288", "process_out_blocks": "0", "process_user_time": 2.852528}
+[0m18:05:29.873368 [debug] [MainThread]: Command `dbt init` succeeded at 18:05:29.872712 after 1399.92 seconds
+[0m18:05:29.875752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcca0e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cbdc8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cbddae0>]}
+[0m18:05:29.877452 [debug] [MainThread]: Flushing usage events
+[0m18:05:31.586251 [debug] [MainThread]: An error was encountered while trying to flush usage events
