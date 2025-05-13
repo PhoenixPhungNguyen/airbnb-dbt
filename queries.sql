@@ -101,8 +101,33 @@ SELECT * FROM "AIRBNB"."DEV"."FCT_REVIEWS" WHERE listing_id=3176;
 INSERT INTO "AIRBNB"."RAW"."RAW_REVIEWS"
 VALUES (3176, CURRENT_TIMESTAMP(), 'Zoltan', 'excellent stay!', 'positive');
 
-
-
+--dim_listings_w_hosts.sql
+--combine 2 table dim_listings_cleansed and dim_hosts_cleansed into 1 
+--using EPHEMERAL (set up at dbt_project.yml)
+WITH 
+l AS
+(
+    SELECT *
+    FROM {{ ref('dim_listings_cleansed') }}
+), 
+h AS
+(
+    SELECT *
+    FROM {{ ref('dim_hosts_cleansed') }}
+)
+SELECT  l.listing_id,
+        l.listing_name,
+        l.room_type,
+        l.minimum_nights,
+        l.price,
+        l.host_id,
+        h.host_name,
+        h.is_superhost as host_is_superhost,
+        h.created_at,
+        GREATEST(l.updated_at,h.updated_at) AS updated_at
+FROM l
+LEFT JOIN h
+ON (h.host_id = l.host_id)
 
 -- Sources and seeds
 -- models/mart/mart_fullmoon_reviews.sql

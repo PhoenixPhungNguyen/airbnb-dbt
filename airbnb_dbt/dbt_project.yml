@@ -31,3 +31,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   airbnb_dbt:
+    +materialized: view # all models in this directory will  be VIEWS by default when run 'dbt run' command
+    src: 
+      +materialized: ephemeral #view
+    dim:
+      +materialized: table
+    
+
