@@ -1,7 +1,6 @@
---models/src/src_reviews.sql :
 WITH raw_reviews AS (
     SELECT *
-    FROM {{ source('airbnb','reviews') }} -- use jinja template instead of direct table  AIRBNB.RAW.RAW_REVIEWS
+    FROM {{ source('airbnb','reviews') }} 
 )
 SELECT listing_id,
     date AS review_date,

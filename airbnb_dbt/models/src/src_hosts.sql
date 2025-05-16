@@ -1,5 +1,3 @@
---use dbt compile to check reference 
--- models/src/src_hosts.sql
 WITH raw_hosts AS (
     SELECT *
     FROM {{ source('airbnb','hosts') }} -- use jinja template instead of direct table  AIRBNB.RAW.RAW_HOSTS

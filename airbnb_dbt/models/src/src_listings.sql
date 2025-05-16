@@ -1,10 +1,6 @@
--- Materializations
--- src
--- models/src/src_listings.sql
---query will be destination for this view
 WITH raw_listings AS (
     SELECT *
-    FROM {{ source('airbnb','listings') }} -- use jinja template instead of direct table AIRBNB.RAW.RAW_LISTINGS
+    FROM {{ source('airbnb','listings') }} 
 )
 SELECT id AS listing_id,
     name AS listing_name,

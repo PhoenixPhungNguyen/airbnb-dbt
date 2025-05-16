@@ -1,5 +1,3 @@
---combine 2 table dim_listings_cleansed and dim_hosts_cleansed into 1 
---using EPHEMERAL (set up at dbt_project.yml)
 WITH 
 l AS
 (

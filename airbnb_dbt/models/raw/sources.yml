@@ -8,4 +8,11 @@ sources:
         identifier: raw_hosts
       - name: reviews
         identifier: raw_reviews
-    
+        loaded_at_field: date
+        freshness:  #use command : dbt source freshness, only use for monitoring pipeline run ontime or not as SLA(agreement between DA and DE), not interupt dbt run
+          warn_after: { count: 1, period: hour}
+          error_after: { count: 24, period: hour}
+
+#if we need to use pipeline to check freshness --> need to write other freshness  in command line   
+#dbt source freshness || exit 1
+#dbt run

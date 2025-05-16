@@ -32,6 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   airbnb_dbt:
     +materialized: view # all models in this directory will  be VIEWS by default when run 'dbt run' command
+    +post-hook:
+      -"GRANT SELECT ON {this} TO ROLE REPORTER"
     src: 
       +materialized: ephemeral #view
     dim:

@@ -1,4 +1,3 @@
--- models/mart/mart_fullmoon_reviews.sql
 {{ 
     config(
         materialized = 'table',
