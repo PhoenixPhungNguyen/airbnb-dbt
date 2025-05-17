@@ -2,3 +2,4 @@
 target/
 dbt_packages/
 logs/
+s3data/reviews.csv
