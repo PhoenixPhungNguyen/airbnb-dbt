@@ -2,4 +2,5 @@
 target/
 dbt_packages/
 logs/
-s3data/reviews.csv
+s3data/reviews.csvs3data/hosts.csv
+s3data/listings.csv
