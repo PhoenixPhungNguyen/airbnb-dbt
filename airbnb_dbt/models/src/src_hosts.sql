@@ -1,6 +1,6 @@
 WITH raw_hosts AS (
     SELECT *
-    FROM {{ source('airbnb','hosts') }} -- use jinja template instead of direct table  AIRBNB.RAW.RAW_HOSTS
+    FROM {{ source('airbnb','hosts') }} 
 )                       
 SELECT id AS host_id,
     NAME AS host_name,

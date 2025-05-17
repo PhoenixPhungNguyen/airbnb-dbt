@@ -18,8 +18,8 @@ models:
   airbnb_dbt:
     +materialized: view
     +post-hook:
-      - "GRANT SELECT ON {this} TO ROLE REPORTER"
-    src: 
+      - "GRANT SELECT ON {{ this }} TO ROLE REPORTER"
+    src:
       +materialized: ephemeral
     dim:
       +materialized: table
