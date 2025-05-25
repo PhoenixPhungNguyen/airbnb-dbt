@@ -1,5 +1,5 @@
 [project]
-name = "airbnb"
+name = "airbnb-dbt"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,9 +7,4 @@ requires-python = ">=3.10"
 dependencies = [
     "dbt-core>=1.9.4",
     "dbt-snowflake>=1.9.4",
-]
-
-[tool.uv.workspace]
-members = [
-    "airbnb_dbt",
 ]
